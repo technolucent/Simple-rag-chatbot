@@ -1,10 +1,10 @@
 # Simple RAG Chatbot
 Building a simple RAG chatbot with LangChain + Hugging Face
 
+# Simple RAG Chatbot
+Retrieval demo using LangChain + Hugging Face embeddings + FAISS.
+
 ## How to run
+```bash
 pip install -r requirements.txt
 python app.py
-First run downloads models (~100MB)
-
-### Current Projects
-- [Simple RAG Chatbot](https://github.com/technolucent/Simple-rag-chatbot) — LangChain + Hugging Face starter

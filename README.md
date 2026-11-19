@@ -8,3 +8,13 @@ Retrieval demo using LangChain + Hugging Face embeddings + FAISS.
 ```bash
 pip install -r requirements.txt
 python app.py
+
+First run downloads models (~100MB).
+
+Loading embeddings...
+Building vector store...
+
+Query: What is LangChain?
+Retrieved: LangChain is a framework for building LLM applications.
+...
+RAG retrieval demo complete.

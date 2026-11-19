@@ -15,3 +15,8 @@ print("Building vector store...")
 vectorstore = FAISS.from_documents(chunks, embeddings)
 
 print("RAG skeleton ready. Add your LLM next.")
+
+query = "What is LangChain?"
+results = vectorstore.similarity_search(query, k=1)
+print(f"Query: {query}")
+print(f"Retrieved: {results[0].page_content}")

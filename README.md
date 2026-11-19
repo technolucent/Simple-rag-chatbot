@@ -18,3 +18,8 @@ Query: What is LangChain?
 Retrieved: LangChain is a framework for building LLM applications.
 ...
 RAG retrieval demo complete.
+
+
+## Full RAG
+Set token: export HUGGINGFACEHUB_API_TOKEN=your_hf_token
+Then run again for generation.

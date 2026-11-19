@@ -23,7 +23,3 @@ RAG retrieval demo complete.
 ## Full RAG
 Set token: export HUGGINGFACEHUB_API_TOKEN=your_hf_token
 Then run again for generation.
-
-__pycache__/
-*.pyc
-.env

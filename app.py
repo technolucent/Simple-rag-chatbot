@@ -1,8 +1,6 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from langchain.chains import RetrievalQA
-from langchain_community.llms import HuggingFaceHub
 
 print("Loading embeddings...")
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
@@ -26,18 +24,3 @@ for q in queries:
     print(f"Retrieved: {results[0].page_content}")
 
 print("\nRAG retrieval demo complete.")
-
-from langchain_community.llms import HuggingFaceHub
-import os
-
-# Set your token: export HUGGINGFACEHUB_API_TOKEN=hf_...
-llm = HuggingFaceHub(repo_id="google/flan-t5-small", model_kwargs={"temperature": 0.5, "max_length": 64})
-
-retriever = vectorstore.as_retriever()
-qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever)
-
-print("\n--- Full RAG ---")
-answer = qa.invoke({"query": "What is RAG?"})
-print(answer["result"])
-
-

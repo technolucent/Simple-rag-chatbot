@@ -3,3 +3,7 @@ langchain-community
 langchain-huggingface
 sentence-transformers
 faiss-cpu
+langchain-core
+langchain-huggingface
+transformers
+torch

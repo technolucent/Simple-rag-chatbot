@@ -1,25 +1,24 @@
 # Simple RAG Chatbot
-Building a simple RAG chatbot with LangChain + Hugging Face
 
-# Simple RAG Chatbot
-Retrieval demo using LangChain + Hugging Face embeddings + FAISS.
+Interactive Retrieval-Augmented Generation demo using LangChain, Hugging Face embeddings, and a local LLM.
 
-## How to run
+## Features
+- Loads documents and builds a FAISS vector store
+- Retrieves relevant context for user questions
+- Generates answers with a local DistilGPT-2 model
+- Interactive CLI chat
+
+## Setup
 ```bash
 pip install -r requirements.txt
+
+## How to run
 python app.py
 
-First run downloads models (~100MB).
+Type your questions. Type exit to quit.
+Note: First run downloads models (~400MB total).
 
-Loading embeddings...
-Building vector store...
+Requirements
 
-Query: What is LangChain?
-Retrieved: LangChain is a framework for building LLM applications.
-...
-RAG retrieval demo complete.
-
-
-## Full RAG
-Set token: export HUGGINGFACEHUB_API_TOKEN=your_hf_token
-Then run again for generation.
+Python 3.10+
+See requirements.txt
